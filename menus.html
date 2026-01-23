@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sample menus from Harvest & Spice - Retreat dinners, breakfasts, and boxed lunches featuring plant-powered Mediterranean cuisine.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sample Menus | Harvest & Spice">
+  <meta property="og:description" content="Explore our signature retreat dinners, nourishing breakfasts, and vibrant boxed lunches.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <title>Sample Menus | Harvest & Spice</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        Harvest & Spice
+        <span class="logo__tagline">Plant-Powered Catering</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="menus.html" class="nav__link nav__link--active">Menus</a>
+        <a href="index.html#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-nav__link">Home</a>
+    <a href="about.html" class="mobile-nav__link">About</a>
+    <a href="services.html" class="mobile-nav__link">Services</a>
+    <a href="menus.html" class="mobile-nav__link mobile-nav__link--active">Menus</a>
+    <a href="index.html#contact" class="mobile-nav__link">Contact</a>
+  </nav>
+
+  <main class="main-content">
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1547592180-85f173990554?w=1600&q=80');">
+      <div class="page-header__content">
+        <h1 class="page-header__title">Menus That Nourish</h1>
+        <p class="page-header__subtitle">Seasonal flavors, thoughtful design</p>
+      </div>
+    </section>
+
+    <!-- Menu Overview -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title">Three Ways to Feed Well</h2>
+          <p class="section-header__subtitle">Each menu is a starting point—we customize based on your event, dietary needs, and seasonal availability</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3 class="card__title">Retreat Dinner</h3>
+            <p class="card__text">Hearty, satisfying dinners designed to bring people together after a full day. Bold flavors, beautiful presentation.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Retreat Breakfast</h3>
+            <p class="card__text">Nourishing morning meals that energize without weighing you down. Fresh, bright, and sustaining.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Boxed Lunch</h3>
+            <p class="card__text">Vibrant, portable meals perfect for corporate events, team outings, or gatherings on the go.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+      <div class="container">
+        <div class="gallery">
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Colorful vegetable salad" class="gallery__image" loading="lazy">
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Fresh Mediterranean spread" class="gallery__image" loading="lazy">
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=80" alt="Vibrant food preparation" class="gallery__image" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Retreat Dinner Menu -->
+    <section class="menu-section" id="dinner" style="background-image: url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1600&q=80');">
+      <div class="container">
+        <div class="overlay-box">
+          <p class="menu-label">Sample Menu</p>
+          <h2>Retreat Dinner</h2>
+          <p class="menu-intro">Gather around flavor</p>
+          <ul class="menu-list">
+            <li>Moroccan-Spiced Lentil Veggie Burgers</li>
+            <li class="menu-note">or Tofu Banh Mi option</li>
+            <li>Moroccan Salad Trio</li>
+            <li class="menu-note">Taktouka, Zaalouk & Carrot-Beet Salad</li>
+            <li>Supergreens Rainbow Salad</li>
+            <li class="menu-note">with Pomegranate Vinaigrette</li>
+            <li>Seasonal Roasted Vegetables</li>
+            <li>Mini Dessert Bites</li>
+          </ul>
+          <p class="menu-dietary">Vegan & Gluten-Free Options Available</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Retreat Breakfast Menu -->
+    <section class="menu-section" id="breakfast" style="background-image: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1600&q=80');">
+      <div class="container">
+        <div class="overlay-box">
+          <p class="menu-label">Sample Menu</p>
+          <h2>Retreat Breakfast</h2>
+          <p class="menu-intro">Start with intention</p>
+          <ul class="menu-list">
+            <li>Seasonal Vegetable Egg Scramble</li>
+            <li class="menu-note">Vegan option available</li>
+            <li>Za'atar Smashed Potatoes</li>
+            <li>Fresh Fruit Display</li>
+            <li>House Granola & Yogurt Station</li>
+            <li class="menu-note">Gluten-free option available</li>
+            <li>Coffee & Tea Service</li>
+            <li class="menu-note">Optional add-on</li>
+          </ul>
+          <p class="menu-dietary">Vegan & Gluten-Free Options Available</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boxed Lunch Menu -->
+    <section class="menu-section" id="boxed" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80');">
+      <div class="container">
+        <div class="overlay-box">
+          <p class="menu-label">Sample Menu</p>
+          <h2>Boxed Lunch</h2>
+          <p class="menu-intro">Eat well on the move</p>
+          <ul class="menu-list">
+            <li>Choose Your Entrée</li>
+            <li class="menu-note">Tofu Banh Mi • Chickpea Shawarma Bowl • Za'atar Veggie Wrap</li>
+            <li>Supergreens Rainbow Salad</li>
+            <li>Baba Ghanoush & Hummus</li>
+            <li class="menu-note">with Pita Chips (GF available)</li>
+            <li>Two Mini Desserts</li>
+            <li class="menu-note">GF Macaroons • Almond Flour Banana Bread</li>
+            <li>Trail Mix Pouch</li>
+            <li class="menu-note">Optional add-on</li>
+          </ul>
+          <p class="menu-dietary">Vegan & Gluten-Free Options Available</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dietary Note Section -->
+    <section class="section section--white">
+      <div class="container container--narrow text-center">
+        <h2 class="mb-3">Designed for Everyone</h2>
+        <p class="text-elegant mb-4">Every menu is built with dietary accommodations in mind. Vegan, gluten-free, and dairy-free options are standard—not afterthoughts.</p>
+        <p class="text-muted">For severe allergies, please note we work in a shared kitchen. We'll discuss any specific concerns during the planning process.</p>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="testimonial">
+          <p class="testimonial__quote">"The variety and quality of food was outstanding. Every dietary need was met without sacrificing flavor or presentation. Our guests were genuinely impressed."</p>
+          <p class="testimonial__author">Workshop Host, Berkeley</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <h2 class="cta__title">Ready to Eat Something Real?</h2>
+        <p class="cta__text">Let's design a custom menu for your gathering</p>
+        <a href="index.html#contact" class="btn btn--filled">Request a Custom Menu</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Harvest & Spice</a>
+          <p class="footer__tagline">Plant-powered seasonal meals celebrating Mediterranean flavors</p>
+        </div>
+
+        <div class="footer__nav">
+          <h4 class="footer__heading">Quick Links</h4>
+          <div class="footer__links">
+            <a href="about.html" class="footer__link">About</a>
+            <a href="services.html" class="footer__link">Services</a>
+            <a href="menus.html" class="footer__link">Sample Menus</a>
+            <a href="index.html#contact" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer__contact">
+          <h4 class="footer__heading">Get in Touch</h4>
+          <p class="footer__contact-item">
+            <a href="mailto:harvestandspice@gmail.com">harvestandspice@gmail.com</a>
+          </p>
+          <p class="footer__contact-item">
+            <a href="tel:+15103658348">510-365-8348</a>
+          </p>
+          <p class="footer__contact-item">Oakland, CA &bull; Serving the Bay Area</p>
+
+          <div class="footer__social">
+            <a href="https://instagram.com" class="footer__social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 Harvest & Spice. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

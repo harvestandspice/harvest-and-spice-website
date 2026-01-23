@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Node (if using build tools later)
+node_modules/
+
+# Local Netlify folder
+.netlify/

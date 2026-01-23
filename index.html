@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Harvest & Spice - Plant-powered Mediterranean catering for retreats, corporate events, and private gatherings in the Bay Area.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Harvest & Spice | Plant-Powered Mediterranean Catering">
+  <meta property="og:description" content="Seasonal meals celebrating Mediterranean flavors through California farm bounty. Serving the Bay Area.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <title>Harvest & Spice | Plant-Powered Mediterranean Catering</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        Harvest & Spice
+        <span class="logo__tagline">Plant-Powered Catering</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav__link nav__link--active">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="menus.html" class="nav__link">Menus</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-nav__link mobile-nav__link--active">Home</a>
+    <a href="about.html" class="mobile-nav__link">About</a>
+    <a href="services.html" class="mobile-nav__link">Services</a>
+    <a href="menus.html" class="mobile-nav__link">Menus</a>
+    <a href="#contact" class="mobile-nav__link" id="mobileContactLink">Contact</a>
+  </nav>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1547592180-85f173990554?w=1600&q=80');">
+      <div class="hero__content">
+        <h1 class="hero__title">Plant-Powered Catering</h1>
+        <p class="hero__subtitle">Seasonal Mediterranean meals for retreats and gatherings</p>
+        <a href="#contact" class="btn btn--white">Request a Quote</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title">What Sets Us Apart</h2>
+          <p class="section-header__subtitle">Nourishing food crafted with intention for your gathering</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3 class="card__title">Retreat Expertise</h3>
+            <p class="card__text">Specialized in multi-day wellness retreats with nourishing, vibrant menus that support presence and connection.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Seasonal Menus</h3>
+            <p class="card__text">Mediterranean-inspired dishes featuring California's farm bounty, bright herbs, and warming spices.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Dietary Care</h3>
+            <p class="card__text">Vegan, gluten-free, and allergy-conscious options built into every menu we create.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title">How It Works</h2>
+          <p class="section-header__subtitle">From first conversation to final bite</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step__number">1</span>
+            <h3 class="step__title">Inquiry</h3>
+            <p class="step__text">Tell us about your event, guest count, dietary needs, and vision.</p>
+          </div>
+          <div class="step">
+            <span class="step__number">2</span>
+            <h3 class="step__title">Menu Design</h3>
+            <p class="step__text">We craft a custom seasonal menu tailored to your gathering.</p>
+          </div>
+          <div class="step">
+            <span class="step__number">3</span>
+            <h3 class="step__title">Event Day</h3>
+            <p class="step__text">We handle everything so you can be fully present with your guests.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title">What People Say</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="testimonial">
+            <p class="testimonial__quote">"The food was absolutely stunning. Every dish was thoughtful, nourishing, and delicious. Our retreat guests couldn't stop talking about it."</p>
+            <p class="testimonial__author">Retreat Host, Quaker Center</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__quote">"Working with Harvest & Spice made our corporate offsite special. The team lunches were fresh, vibrant, and accommodated everyone's dietary needs perfectly."</p>
+            <p class="testimonial__author">Event Coordinator, UCOP</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__quote">"Beautiful presentation, incredible flavors, and such a warm, professional experience from start to finish. Highly recommend!"</p>
+            <p class="testimonial__author">Private Client, Berkeley</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section--white" id="contact">
+      <div class="container">
+        <div class="contact-section">
+          <div class="contact-section__info">
+            <h2>Ready to Begin?</h2>
+            <p class="text-elegant mb-4">Let's create something nourishing together. Share your event details and we'll be in touch within 48 hours.</p>
+
+            <div class="contact-details">
+              <p><strong>Email:</strong> <a href="mailto:harvestandspice@gmail.com">harvestandspice@gmail.com</a></p>
+              <p><strong>Phone:</strong> <a href="tel:+15103658348">510-365-8348</a></p>
+              <p><strong>Service Area:</strong> Bay Area (Oakland-based)</p>
+            </div>
+
+            <p class="text-muted mt-4">Prefer to just send an email? That works too. Include your event date, guest count, and any details you have.</p>
+          </div>
+
+          <div class="contact-section__form">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+              <input type="hidden" name="form-name" value="contact">
+
+              <!-- Honeypot field for spam prevention -->
+              <p class="hidden">
+                <label>Don't fill this out: <input name="bot-field"></label>
+              </p>
+
+              <div class="form-group">
+                <label for="name" class="form-label">Name *</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" id="phone" name="phone" class="form-input">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="event-date" class="form-label">Event Date</label>
+                  <input type="date" id="event-date" name="event-date" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="guest-count" class="form-label">Guest Count</label>
+                  <input type="number" id="guest-count" name="guest-count" class="form-input" min="1" placeholder="Approx.">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="event-type" class="form-label">Event Type</label>
+                <select id="event-type" name="event-type" class="form-select">
+                  <option value="">Select an option</option>
+                  <option value="retreat">Retreat Catering</option>
+                  <option value="corporate">Corporate Catering</option>
+                  <option value="private">Private Event</option>
+                  <option value="dropoff">Drop-Off Catering</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Tell Us About Your Event *</label>
+                <textarea id="message" name="message" class="form-textarea" rows="4" required placeholder="Location, dietary needs, vision for your gathering..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--filled">Send Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title">Our Food</h2>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Colorful vegetable salad with fresh greens" class="gallery__image" loading="lazy">
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Fresh Mediterranean spread with dips and vegetables" class="gallery__image" loading="lazy">
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=80" alt="Vibrant seasonal food preparation" class="gallery__image" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Harvest & Spice</a>
+          <p class="footer__tagline">Plant-powered seasonal meals celebrating Mediterranean flavors</p>
+        </div>
+
+        <div class="footer__nav">
+          <h4 class="footer__heading">Quick Links</h4>
+          <div class="footer__links">
+            <a href="about.html" class="footer__link">About</a>
+            <a href="services.html" class="footer__link">Services</a>
+            <a href="menus.html" class="footer__link">Sample Menus</a>
+            <a href="#contact" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer__contact">
+          <h4 class="footer__heading">Get in Touch</h4>
+          <p class="footer__contact-item">
+            <a href="mailto:harvestandspice@gmail.com">harvestandspice@gmail.com</a>
+          </p>
+          <p class="footer__contact-item">
+            <a href="tel:+15103658348">510-365-8348</a>
+          </p>
+          <p class="footer__contact-item">Oakland, CA &bull; Serving the Bay Area</p>
+
+          <div class="footer__social">
+            <a href="https://instagram.com" class="footer__social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 Harvest & Spice. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
