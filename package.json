@@ -1,0 +1,12 @@
+{
+  "name": "harvest-and-spice",
+  "version": "1.0.0",
+  "description": "Harvest & Spice catering website",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

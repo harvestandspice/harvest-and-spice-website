@@ -1,0 +1,173 @@
+---
+layout: base.njk
+title: Services
+description: Harvest & Spice catering services - retreat catering, corporate lunches, private events, and drop-off catering in the Bay Area.
+---
+
+<!-- Page Header -->
+<section class="page-header" style="background-image: url('{{ services.hero.image }}');">
+  <div class="page-header__content">
+    <h1 class="page-header__title">{{ services.hero.title }}</h1>
+    <p class="page-header__subtitle">{{ services.hero.subtitle }}</p>
+  </div>
+</section>
+
+<!-- Services Overview -->
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ services.overview.title }}</h2>
+      <p class="section-header__subtitle">{{ services.overview.subtitle }}</p>
+    </div>
+
+    <div class="grid grid--4">
+      {% for item in services.overview.items %}
+      <div class="card">
+        <h3 class="card__title">{{ item.title }}</h3>
+        <p class="card__text">{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Retreat Catering -->
+<section class="section" id="retreats">
+  <div class="container">
+    <div class="feature">
+      <div class="feature__image">
+        <img src="{{ services.retreat.image }}" alt="{{ services.retreat.image_alt }}" loading="lazy">
+      </div>
+      <div class="feature__content">
+        <h2 class="feature__title">{{ services.retreat.title }}</h2>
+        <p class="text-elegant mb-3">{{ services.retreat.intro }}</p>
+        <p class="feature__text mb-3">{{ services.retreat.text }}</p>
+        <ul class="feature__list">
+          {% for detail in services.retreat.details %}
+          <li><strong>{{ detail.label }}:</strong> {{ detail.value }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Corporate Catering -->
+<section class="section section--white" id="corporate">
+  <div class="container">
+    <div class="feature feature--reverse">
+      <div class="feature__image">
+        <img src="{{ services.corporate.image }}" alt="{{ services.corporate.image_alt }}" loading="lazy">
+      </div>
+      <div class="feature__content">
+        <h2 class="feature__title">{{ services.corporate.title }}</h2>
+        <p class="text-elegant mb-3">{{ services.corporate.intro }}</p>
+        <p class="feature__text mb-3">{{ services.corporate.text }}</p>
+        <ul class="feature__list">
+          {% for detail in services.corporate.details %}
+          <li><strong>{{ detail.label }}:</strong> {{ detail.value }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Private Events -->
+<section class="section" id="private">
+  <div class="container">
+    <div class="feature">
+      <div class="feature__image">
+        <img src="{{ services.private.image }}" alt="{{ services.private.image_alt }}" loading="lazy">
+      </div>
+      <div class="feature__content">
+        <h2 class="feature__title">{{ services.private.title }}</h2>
+        <p class="text-elegant mb-3">{{ services.private.intro }}</p>
+        <p class="feature__text mb-3">{{ services.private.text }}</p>
+        <ul class="feature__list">
+          {% for detail in services.private.details %}
+          <li><strong>{{ detail.label }}:</strong> {{ detail.value }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Drop-Off Catering -->
+<section class="section section--white" id="dropoff">
+  <div class="container">
+    <div class="feature feature--reverse">
+      <div class="feature__image">
+        <img src="{{ services.dropoff.image }}" alt="{{ services.dropoff.image_alt }}" loading="lazy">
+      </div>
+      <div class="feature__content">
+        <h2 class="feature__title">{{ services.dropoff.title }}</h2>
+        <p class="text-elegant mb-3">{{ services.dropoff.intro }}</p>
+        <p class="feature__text mb-3">{{ services.dropoff.text }}</p>
+        <ul class="feature__list">
+          {% for detail in services.dropoff.details %}
+          <li><strong>{{ detail.label }}:</strong> {{ detail.value }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add-Ons Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ services.addons.title }}</h2>
+      <p class="section-header__subtitle">{{ services.addons.subtitle }}</p>
+    </div>
+
+    <div class="grid grid--3">
+      {% for item in services.addons.items %}
+      <div class="card">
+        <h3 class="card__title">{{ item.title }}</h3>
+        <p class="card__text">{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ / Boundaries Section -->
+<section class="section section--white">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ services.faq.title }}</h2>
+      <p class="section-header__subtitle">{{ services.faq.subtitle }}</p>
+    </div>
+
+    <div class="faq">
+      {% for item in services.faq.items %}
+      <div class="faq__item">
+        <h3 class="faq__question">{{ item.question }}</h3>
+        <p class="faq__answer">{{ item.answer }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="testimonial">
+      <p class="testimonial__quote">"{{ services.testimonial.quote }}"</p>
+      <p class="testimonial__author">{{ services.testimonial.author }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <h2 class="cta__title">{{ services.cta.title }}</h2>
+    <p class="cta__text">{{ services.cta.text }}</p>
+    <a href="{{ services.cta.button_link }}" class="btn btn--filled">{{ services.cta.button_text }}</a>
+  </div>
+</section>

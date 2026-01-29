@@ -1,0 +1,127 @@
+---
+layout: base.njk
+title: Sample Menus
+description: Sample menus from Harvest & Spice - Retreat dinners, breakfasts, and boxed lunches featuring plant-powered Mediterranean cuisine.
+---
+
+<!-- Page Header -->
+<section class="page-header" style="background-image: url('{{ menus.hero.image }}');">
+  <div class="page-header__content">
+    <h1 class="page-header__title">{{ menus.hero.title }}</h1>
+    <p class="page-header__subtitle">{{ menus.hero.subtitle }}</p>
+  </div>
+</section>
+
+<!-- Menu Overview -->
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ menus.overview.title }}</h2>
+      <p class="section-header__subtitle">{{ menus.overview.subtitle }}</p>
+    </div>
+
+    <div class="grid grid--3">
+      {% for item in menus.overview.items %}
+      <div class="card">
+        <h3 class="card__title">{{ item.title }}</h3>
+        <p class="card__text">{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="section">
+  <div class="container">
+    <div class="gallery">
+      {% for image in menus.gallery.images %}
+      <div class="gallery__item">
+        <img src="{{ image.url }}" alt="{{ image.alt }}" class="gallery__image" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Retreat Dinner Menu -->
+<section class="menu-section" id="dinner" style="background-image: url('{{ menus.dinner.image }}');">
+  <div class="container">
+    <div class="overlay-box">
+      <p class="menu-label">{{ menus.dinner.label }}</p>
+      <h2>{{ menus.dinner.title }}</h2>
+      <p class="menu-intro">{{ menus.dinner.intro }}</p>
+      <ul class="menu-list">
+        {% for item in menus.dinner.items %}
+        <li>{{ item.name }}</li>
+        {% if item.note %}<li class="menu-note">{{ item.note }}</li>{% endif %}
+        {% endfor %}
+      </ul>
+      <p class="menu-dietary">{{ menus.dinner.dietary_note }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Retreat Breakfast Menu -->
+<section class="menu-section" id="breakfast" style="background-image: url('{{ menus.breakfast.image }}');">
+  <div class="container">
+    <div class="overlay-box">
+      <p class="menu-label">{{ menus.breakfast.label }}</p>
+      <h2>{{ menus.breakfast.title }}</h2>
+      <p class="menu-intro">{{ menus.breakfast.intro }}</p>
+      <ul class="menu-list">
+        {% for item in menus.breakfast.items %}
+        <li>{{ item.name }}</li>
+        {% if item.note %}<li class="menu-note">{{ item.note }}</li>{% endif %}
+        {% endfor %}
+      </ul>
+      <p class="menu-dietary">{{ menus.breakfast.dietary_note }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Boxed Lunch Menu -->
+<section class="menu-section" id="boxed" style="background-image: url('{{ menus.boxed.image }}');">
+  <div class="container">
+    <div class="overlay-box">
+      <p class="menu-label">{{ menus.boxed.label }}</p>
+      <h2>{{ menus.boxed.title }}</h2>
+      <p class="menu-intro">{{ menus.boxed.intro }}</p>
+      <ul class="menu-list">
+        {% for item in menus.boxed.items %}
+        <li>{{ item.name }}</li>
+        {% if item.note %}<li class="menu-note">{{ item.note }}</li>{% endif %}
+        {% endfor %}
+      </ul>
+      <p class="menu-dietary">{{ menus.boxed.dietary_note }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Dietary Note Section -->
+<section class="section section--white">
+  <div class="container container--narrow text-center">
+    <h2 class="mb-3">{{ menus.dietary.title }}</h2>
+    <p class="text-elegant mb-4">{{ menus.dietary.intro }}</p>
+    <p class="text-muted">{{ menus.dietary.note }}</p>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="testimonial">
+      <p class="testimonial__quote">"{{ menus.testimonial.quote }}"</p>
+      <p class="testimonial__author">{{ menus.testimonial.author }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <h2 class="cta__title">{{ menus.cta.title }}</h2>
+    <p class="cta__text">{{ menus.cta.text }}</p>
+    <a href="{{ menus.cta.button_link }}" class="btn btn--filled">{{ menus.cta.button_text }}</a>
+  </div>
+</section>

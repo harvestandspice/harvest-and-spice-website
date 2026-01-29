@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description | default(site.description) }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }} | {{ site.name }}">
+  <meta property="og:description" content="{{ description | default(site.description) }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <title>{{ title }} | {{ site.name }}</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="logo">
+        {{ site.name }}
+        <span class="logo__tagline">{{ site.tagline }}</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/" class="nav__link{% if page.url == '/' %} nav__link--active{% endif %}">Home</a>
+        <a href="/about/" class="nav__link{% if page.url == '/about/' %} nav__link--active{% endif %}">About</a>
+        <a href="/services/" class="nav__link{% if page.url == '/services/' %} nav__link--active{% endif %}">Services</a>
+        <a href="/menus/" class="nav__link{% if page.url == '/menus/' %} nav__link--active{% endif %}">Menus</a>
+        <a href="/#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="/" class="mobile-nav__link{% if page.url == '/' %} mobile-nav__link--active{% endif %}">Home</a>
+    <a href="/about/" class="mobile-nav__link{% if page.url == '/about/' %} mobile-nav__link--active{% endif %}">About</a>
+    <a href="/services/" class="mobile-nav__link{% if page.url == '/services/' %} mobile-nav__link--active{% endif %}">Services</a>
+    <a href="/menus/" class="mobile-nav__link{% if page.url == '/menus/' %} mobile-nav__link--active{% endif %}">Menus</a>
+    <a href="/#contact" class="mobile-nav__link">Contact</a>
+  </nav>
+
+  <main class="main-content">
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo">{{ site.name }}</a>
+          <p class="footer__tagline">{{ site.description }}</p>
+        </div>
+
+        <div class="footer__nav">
+          <h4 class="footer__heading">Quick Links</h4>
+          <div class="footer__links">
+            <a href="/about/" class="footer__link">About</a>
+            <a href="/services/" class="footer__link">Services</a>
+            <a href="/menus/" class="footer__link">Sample Menus</a>
+            <a href="/#contact" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer__contact">
+          <h4 class="footer__heading">Get in Touch</h4>
+          <p class="footer__contact-item">
+            <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+          </p>
+          <p class="footer__contact-item">
+            <a href="tel:+1{{ site.contact.phone | replace('-', '') | replace(' ', '') }}">{{ site.contact.phone }}</a>
+          </p>
+          <p class="footer__contact-item">{{ site.contact.address }} &bull; Serving the Bay Area</p>
+
+          {% if site.contact.instagram %}
+          <div class="footer__social">
+            <a href="{{ site.contact.instagram }}" class="footer__social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; {{ "now" | date: "%Y" }} {{ site.name }}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/script.js"></script>
+
+  <!-- Netlify Identity redirect after login -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

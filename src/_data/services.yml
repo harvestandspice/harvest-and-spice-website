@@ -1,0 +1,115 @@
+hero:
+  title: Nourish Your Gathering
+  subtitle: Four ways to work together
+  image: https://images.unsplash.com/photo-1555244162-803834f70033?w=1600&q=80
+
+overview:
+  title: How We Can Help
+  subtitle: Whether you're hosting a weekend retreat or a team lunch, we bring the same care to every gathering
+  items:
+    - title: Retreat Catering
+      text: Multi-day menus designed to nourish and sustain. Perfect for wellness retreats, workshops, and group gatherings.
+    - title: Corporate Catering
+      text: Elevate your team lunches, offsites, and meetings with fresh, vibrant food that accommodates everyone.
+    - title: Private Events
+      text: From intimate dinner parties to milestone celebrations, we create memorable culinary experiences.
+    - title: Drop-Off Catering
+      text: Beautifully packaged meals and platters delivered to your door. Ready to serve, easy to enjoy.
+
+retreat:
+  title: Retreat Catering
+  intro: Weekend and multi-day menus designed to support presence, connection, and care.
+  text: From Friday dinner through Sunday lunch, we create a cohesive arc of nourishing meals—fresh breakfasts, satisfying lunches, and hearty dinners—with seamless dietary accommodations throughout.
+  image: https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80
+  image_alt: Retreat catering spread
+  details:
+    - label: Guest count
+      value: 16–75 guests
+    - label: Ideal for
+      value: Wellness retreats, workshops, group gatherings
+    - label: Lead time
+      value: 4–8 weeks preferred
+    - label: Pricing
+      value: Custom quotes based on guest count and meal plan
+
+corporate:
+  title: Corporate Catering
+  intro: Fresh, vibrant lunches that keep your team energized and focused.
+  text: Whether it's a daily team lunch, a special offsite meeting, or a workshop spread, we deliver food that impresses while accommodating every dietary need at the table.
+  image: https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80
+  image_alt: Corporate lunch spread
+  details:
+    - label: Guest count
+      value: 10–60 guests
+    - label: Options
+      value: Boxed lunches, buffet spreads, salad & entrée stations
+    - label: Lead time
+      value: 2–4 weeks preferred
+    - label: Pricing
+      value: Boxed lunches starting at market rate per person
+
+private:
+  title: Private Events
+  intro: Intimate gatherings deserve extraordinary food.
+  text: Birthdays, anniversaries, dinner parties, and milestone celebrations—we bring the same care and creativity to smaller gatherings, with menus designed around your vision and guest preferences.
+  image: https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80
+  image_alt: Elegant private dinner setup
+  details:
+    - label: Guest count
+      value: 10–40 guests
+    - label: Style
+      value: Mezze spreads, family-style mains, plated options
+    - label: Lead time
+      value: 2–4 weeks preferred
+    - label: Pricing
+      value: Minimum applies; custom quotes provided
+
+dropoff:
+  title: Drop-Off Catering
+  intro: Delicious food, beautifully packaged, delivered to you.
+  text: Perfect for casual gatherings, office meetings, or when you want great food without the full-service setup. We deliver everything ready to serve—you handle the rest.
+  image: https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80
+  image_alt: Packaged catering ready for delivery
+  details:
+    - label: Guest count
+      value: Flexible
+    - label: Includes
+      value: Trays, serving utensils, clear labeling
+    - label: Lead time
+      value: 1–2 weeks minimum
+    - label: Pricing
+      value: Based on menu selection and guest count
+
+addons:
+  title: Add-Ons & Extras
+  subtitle: Enhance your event with these options
+  items:
+    - title: Dessert Add-On
+      text: Sweet endings through our dessert chef partner—from mini bites to full dessert spreads.
+    - title: Beverage Service
+      text: Coffee and tea stations, fresh-pressed juices, or specialty beverages for your gathering.
+    - title: Service Extras
+      text: Eco-friendly disposable plates and cutlery, delivery fees for extended service areas.
+
+faq:
+  title: Good to Know
+  subtitle: A few things that help us serve you best
+  items:
+    - question: Lead Time
+      answer: We prefer 2–4 weeks notice for most events, and 4–8 weeks for multi-day retreats. Last-minute requests (under 7 days) are difficult to accommodate.
+    - question: Dietary Accommodations
+      answer: We build vegan, gluten-free, and dairy-free options into every menu. For severe allergies, please note that we work in a shared kitchen and cannot guarantee zero cross-contamination.
+    - question: Service Area
+      answer: We're Oakland-based and serve the greater Bay Area—Berkeley, San Francisco, Marin, the Peninsula, and the Santa Cruz Mountains. Delivery fees may apply for extended areas.
+    - question: Payment
+      answer: A deposit is required to secure your date. Final payment is due before the event. We'll discuss details during the booking process.
+
+testimonial:
+  quote: Working with Harvest & Spice was seamless from start to finish. The food was incredible, the presentation was beautiful, and they handled all of our dietary needs with ease.
+  author: Event Coordinator, UCOP
+
+cta:
+  title: Let's Talk Food
+  text: Ready to start planning? Reach out with your event details and we'll be in touch
+  button_text: Request a Quote
+  button_link: /#contact

@@ -1,0 +1,99 @@
+---
+layout: base.njk
+title: About
+description: Learn about Harvest & Spice - Bay Area plant-powered Mediterranean catering founded on nourishment, culture, and bold flavor.
+---
+
+<!-- Page Header -->
+<section class="page-header" style="background-image: url('{{ about.hero.image }}');">
+  <div class="page-header__content">
+    <h1 class="page-header__title">{{ about.hero.title }}</h1>
+    <p class="page-header__subtitle">{{ about.hero.subtitle }}</p>
+  </div>
+</section>
+
+<!-- About Story Section -->
+<section class="section">
+  <div class="container">
+    <div class="feature">
+      <div class="feature__image">
+        <img src="{{ about.story.image }}" alt="{{ about.story.image_alt }}" loading="lazy">
+      </div>
+      <div class="feature__content">
+        <h2 class="feature__title">{{ about.story.title }}</h2>
+        <p class="text-elegant mb-3">{{ about.story.intro }}</p>
+        <p class="feature__text">{{ about.story.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Philosophy Section -->
+<section class="section section--white">
+  <div class="container">
+    <div class="feature feature--reverse">
+      <div class="feature__image">
+        <img src="{{ about.food.image }}" alt="{{ about.food.image_alt }}" loading="lazy">
+      </div>
+      <div class="feature__content">
+        <h2 class="feature__title">{{ about.food.title }}</h2>
+        <p class="text-elegant mb-3">{{ about.food.intro }}</p>
+        <p class="feature__text">{{ about.food.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Retreats Section -->
+<section class="section">
+  <div class="container">
+    <div class="feature">
+      <div class="feature__image">
+        <img src="{{ about.why_retreats.image }}" alt="{{ about.why_retreats.image_alt }}" loading="lazy">
+      </div>
+      <div class="feature__content">
+        <h2 class="feature__title">{{ about.why_retreats.title }}</h2>
+        <p class="text-elegant mb-3">{{ about.why_retreats.intro }}</p>
+        <p class="feature__text">{{ about.why_retreats.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ about.values.title }}</h2>
+      <p class="section-header__subtitle">{{ about.values.subtitle }}</p>
+    </div>
+
+    <div class="grid grid--3">
+      {% for value in about.values.items %}
+      <div class="card">
+        <h3 class="card__title">{{ value.title }}</h3>
+        <p class="card__text">{{ value.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="testimonial">
+      <p class="testimonial__quote">"{{ about.testimonial.quote }}"</p>
+      <p class="testimonial__author">{{ about.testimonial.author }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <h2 class="cta__title">{{ about.cta.title }}</h2>
+    <p class="cta__text">{{ about.cta.text }}</p>
+    <a href="{{ about.cta.button_link }}" class="btn btn--filled">{{ about.cta.button_text }}</a>
+  </div>
+</section>

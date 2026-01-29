@@ -2,62 +2,306 @@ backend:
   name: git-gateway
   branch: main
 
-# Local testing (uncomment for local development)
-# local_backend: true
-
-# Media and public folders
-media_folder: "images"
+media_folder: "src/images"
 public_folder: "/images"
 
-# Site URL for preview
 site_url: https://harvestandspice.com
 
-# Collections
 collections:
-  # Testimonials
-  - name: "testimonials"
-    label: "Testimonials"
-    folder: "_data/testimonials"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Quote", name: "quote", widget: "text", required: true }
-      - { label: "Author Name", name: "author", widget: "string", required: true }
-      - { label: "Author Title/Company", name: "title", widget: "string", required: false }
-      - { label: "Event Type", name: "event_type", widget: "select", options: ["Retreat", "Corporate", "Private Event"], required: false }
-      - { label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Show on homepage" }
-
-  # Gallery Images
-  - name: "gallery"
-    label: "Gallery"
-    folder: "_data/gallery"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Image", name: "image", widget: "image", required: true }
-      - { label: "Alt Text", name: "alt", widget: "string", required: true, hint: "Describe the image for accessibility" }
-      - { label: "Caption", name: "caption", widget: "string", required: false }
-      - { label: "Category", name: "category", widget: "select", options: ["Food", "Events", "Behind the Scenes"], required: false }
-      - { label: "Featured", name: "featured", widget: "boolean", default: false }
-
-  # Site Settings (single file)
+  # Site Settings
   - name: "settings"
     label: "Site Settings"
     files:
-      - label: "Contact Information"
-        name: "contact"
-        file: "_data/contact.yml"
-        fields:
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Phone", name: "phone", widget: "string" }
-          - { label: "Address", name: "address", widget: "string" }
-          - { label: "Service Area", name: "service_area", widget: "string" }
-          - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
-
-      - label: "Business Info"
-        name: "business"
-        file: "_data/business.yml"
+      - label: "Global Settings"
+        name: "site"
+        file: "src/_data/site.yml"
         fields:
           - { label: "Business Name", name: "name", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "string" }
-          - { label: "Short Description", name: "description", widget: "text" }
+          - { label: "Description", name: "description", widget: "text" }
+          - label: "Contact Info"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "Service Area", name: "service_area", widget: "string" }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+
+  # Homepage
+  - name: "home"
+    label: "Homepage"
+    files:
+      - label: "Homepage Content"
+        name: "home"
+        file: "src/_data/home.yml"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Background Image URL", name: "image", widget: "string" }
+              - { label: "Button Text", name: "cta_text", widget: "string" }
+              - { label: "Button Link", name: "cta_link", widget: "string" }
+          - label: "Features Section"
+            name: "features"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Feature Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "How It Works Section"
+            name: "how_it_works"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Number", name: "number", widget: "number" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Testimonials Section"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Testimonials"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Quote", name: "quote", widget: "text" }
+                  - { label: "Author", name: "author", widget: "string" }
+          - label: "Contact Section"
+            name: "contact_section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro Text", name: "intro", widget: "text" }
+              - { label: "Note", name: "note", widget: "text" }
+          - label: "Gallery Section"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Image URL", name: "url", widget: "string" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+
+  # About Page
+  - name: "about"
+    label: "About Page"
+    files:
+      - label: "About Content"
+        name: "about"
+        file: "src/_data/about.yml"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Background Image URL", name: "image", widget: "string" }
+          - label: "Story Section"
+            name: "story"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - { label: "Image Alt", name: "image_alt", widget: "string" }
+          - label: "Food Section"
+            name: "food"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - { label: "Image Alt", name: "image_alt", widget: "string" }
+          - label: "Why Retreats Section"
+            name: "why_retreats"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - { label: "Image Alt", name: "image_alt", widget: "string" }
+          - label: "Values Section"
+            name: "values"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Values"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Testimonial"
+            name: "testimonial"
+            widget: "object"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Author", name: "author", widget: "string" }
+          - label: "CTA Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "button_text", widget: "string" }
+              - { label: "Button Link", name: "button_link", widget: "string" }
+
+  # Services Page
+  - name: "services"
+    label: "Services Page"
+    files:
+      - label: "Services Content"
+        name: "services"
+        file: "src/_data/services.yml"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Background Image URL", name: "image", widget: "string" }
+          - label: "Overview Section"
+            name: "overview"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Service Cards"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Testimonial"
+            name: "testimonial"
+            widget: "object"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Author", name: "author", widget: "string" }
+          - label: "CTA Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "button_text", widget: "string" }
+              - { label: "Button Link", name: "button_link", widget: "string" }
+
+  # Menus Page
+  - name: "menus"
+    label: "Menus Page"
+    files:
+      - label: "Menus Content"
+        name: "menus"
+        file: "src/_data/menus.yml"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Background Image URL", name: "image", widget: "string" }
+          - label: "Overview Section"
+            name: "overview"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Menu Cards"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Dinner Menu"
+            name: "dinner"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "string" }
+              - { label: "Background Image URL", name: "image", widget: "string" }
+              - label: "Menu Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Item Name", name: "name", widget: "string" }
+                  - { label: "Note", name: "note", widget: "string", required: false }
+              - { label: "Dietary Note", name: "dietary_note", widget: "string" }
+          - label: "Breakfast Menu"
+            name: "breakfast"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "string" }
+              - { label: "Background Image URL", name: "image", widget: "string" }
+              - label: "Menu Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Item Name", name: "name", widget: "string" }
+                  - { label: "Note", name: "note", widget: "string", required: false }
+              - { label: "Dietary Note", name: "dietary_note", widget: "string" }
+          - label: "Boxed Lunch Menu"
+            name: "boxed"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "string" }
+              - { label: "Background Image URL", name: "image", widget: "string" }
+              - label: "Menu Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Item Name", name: "name", widget: "string" }
+                  - { label: "Note", name: "note", widget: "string", required: false }
+              - { label: "Dietary Note", name: "dietary_note", widget: "string" }
+          - label: "Dietary Section"
+            name: "dietary"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Note", name: "note", widget: "text" }
+          - label: "Testimonial"
+            name: "testimonial"
+            widget: "object"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Author", name: "author", widget: "string" }
+          - label: "CTA Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Button Text", name: "button_text", widget: "string" }
+              - { label: "Button Link", name: "button_link", widget: "string" }

@@ -1,0 +1,56 @@
+hero:
+  title: Plant-Powered Catering
+  subtitle: Seasonal Mediterranean meals for retreats and gatherings
+  image: https://images.unsplash.com/photo-1547592180-85f173990554?w=1600&q=80
+  cta_text: Request a Quote
+  cta_link: "#contact"
+
+features:
+  title: What Sets Us Apart
+  subtitle: Nourishing food crafted with intention for your gathering
+  items:
+    - title: Retreat Expertise
+      text: Specialized in multi-day wellness retreats with nourishing, vibrant menus that support presence and connection.
+    - title: Seasonal Menus
+      text: Mediterranean-inspired dishes featuring California's farm bounty, bright herbs, and warming spices.
+    - title: Dietary Care
+      text: Vegan, gluten-free, and allergy-conscious options built into every menu we create.
+
+how_it_works:
+  title: How It Works
+  subtitle: From first conversation to final bite
+  steps:
+    - number: 1
+      title: Inquiry
+      text: Tell us about your event, guest count, dietary needs, and vision.
+    - number: 2
+      title: Menu Design
+      text: We craft a custom seasonal menu tailored to your gathering.
+    - number: 3
+      title: Event Day
+      text: We handle everything so you can be fully present with your guests.
+
+testimonials:
+  title: What People Say
+  items:
+    - quote: The food was absolutely stunning. Every dish was thoughtful, nourishing, and delicious. Our retreat guests couldn't stop talking about it.
+      author: Retreat Host, Quaker Center
+    - quote: Working with Harvest & Spice made our corporate offsite special. The team lunches were fresh, vibrant, and accommodated everyone's dietary needs perfectly.
+      author: Event Coordinator, UCOP
+    - quote: Beautiful presentation, incredible flavors, and such a warm, professional experience from start to finish. Highly recommend!
+      author: Private Client, Berkeley
+
+contact_section:
+  title: Ready to Begin?
+  intro: Let's create something nourishing together. Share your event details and we'll be in touch within 48 hours.
+  note: Prefer to just send an email? That works too. Include your event date, guest count, and any details you have.
+
+gallery:
+  title: Our Food
+  images:
+    - url: https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80
+      alt: Colorful vegetable salad with fresh greens
+    - url: https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80
+      alt: Fresh Mediterranean spread with dips and vegetables
+    - url: https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=80
+      alt: Vibrant seasonal food preparation

@@ -1,7 +1,8 @@
 # Netlify configuration for Harvest & Spice
 
 [build]
-  publish = "."
+  command = "npm install && npm run build"
+  publish = "_site"
 
 # Redirect www to non-www
 [[redirects]]

@@ -1,0 +1,93 @@
+hero:
+  title: Menus That Nourish
+  subtitle: Seasonal flavors, thoughtful design
+  image: https://images.unsplash.com/photo-1547592180-85f173990554?w=1600&q=80
+
+overview:
+  title: Three Ways to Feed Well
+  subtitle: Each menu is a starting point—we customize based on your event, dietary needs, and seasonal availability
+  items:
+    - title: Retreat Dinner
+      text: Hearty, satisfying dinners designed to bring people together after a full day. Bold flavors, beautiful presentation.
+    - title: Retreat Breakfast
+      text: Nourishing morning meals that energize without weighing you down. Fresh, bright, and sustaining.
+    - title: Boxed Lunch
+      text: Vibrant, portable meals perfect for corporate events, team outings, or gatherings on the go.
+
+gallery:
+  images:
+    - url: https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80
+      alt: Colorful vegetable salad
+    - url: https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80
+      alt: Fresh Mediterranean spread
+    - url: https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=80
+      alt: Vibrant food preparation
+
+dinner:
+  label: Sample Menu
+  title: Retreat Dinner
+  intro: Gather around flavor
+  image: https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1600&q=80
+  items:
+    - name: Moroccan-Spiced Lentil Veggie Burgers
+      note: or Tofu Banh Mi option
+    - name: Moroccan Salad Trio
+      note: Taktouka, Zaalouk & Carrot-Beet Salad
+    - name: Supergreens Rainbow Salad
+      note: with Pomegranate Vinaigrette
+    - name: Seasonal Roasted Vegetables
+      note: null
+    - name: Mini Dessert Bites
+      note: null
+  dietary_note: Vegan & Gluten-Free Options Available
+
+breakfast:
+  label: Sample Menu
+  title: Retreat Breakfast
+  intro: Start with intention
+  image: https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1600&q=80
+  items:
+    - name: Seasonal Vegetable Egg Scramble
+      note: Vegan option available
+    - name: Za'atar Smashed Potatoes
+      note: null
+    - name: Fresh Fruit Display
+      note: null
+    - name: House Granola & Yogurt Station
+      note: Gluten-free option available
+    - name: Coffee & Tea Service
+      note: Optional add-on
+  dietary_note: Vegan & Gluten-Free Options Available
+
+boxed:
+  label: Sample Menu
+  title: Boxed Lunch
+  intro: Eat well on the move
+  image: https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80
+  items:
+    - name: Choose Your Entrée
+      note: Tofu Banh Mi • Chickpea Shawarma Bowl • Za'atar Veggie Wrap
+    - name: Supergreens Rainbow Salad
+      note: null
+    - name: Baba Ghanoush & Hummus
+      note: with Pita Chips (GF available)
+    - name: Two Mini Desserts
+      note: GF Macaroons • Almond Flour Banana Bread
+    - name: Trail Mix Pouch
+      note: Optional add-on
+  dietary_note: Vegan & Gluten-Free Options Available
+
+dietary:
+  title: Designed for Everyone
+  intro: Every menu is built with dietary accommodations in mind. Vegan, gluten-free, and dairy-free options are standard—not afterthoughts.
+  note: For severe allergies, please note we work in a shared kitchen. We'll discuss any specific concerns during the planning process.
+
+testimonial:
+  quote: The variety and quality of food was outstanding. Every dietary need was met without sacrificing flavor or presentation. Our guests were genuinely impressed.
+  author: Workshop Host, Berkeley
+
+cta:
+  title: Ready to Eat Something Real?
+  text: Let's design a custom menu for your gathering
+  button_text: Request a Custom Menu
+  button_link: /#contact

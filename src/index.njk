@@ -1,0 +1,165 @@
+---
+layout: base.njk
+title: Plant-Powered Mediterranean Catering
+description: Harvest & Spice - Plant-powered Mediterranean catering for retreats, corporate events, and private gatherings in the Bay Area.
+---
+
+<!-- Hero Section -->
+<section class="hero" style="background-image: url('{{ home.hero.image }}');">
+  <div class="hero__content">
+    <h1 class="hero__title">{{ home.hero.title }}</h1>
+    <p class="hero__subtitle">{{ home.hero.subtitle }}</p>
+    <a href="{{ home.hero.cta_link }}" class="btn btn--white">{{ home.hero.cta_text }}</a>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ home.features.title }}</h2>
+      <p class="section-header__subtitle">{{ home.features.subtitle }}</p>
+    </div>
+
+    <div class="grid grid--3">
+      {% for item in home.features.items %}
+      <div class="card">
+        <h3 class="card__title">{{ item.title }}</h3>
+        <p class="card__text">{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ home.how_it_works.title }}</h2>
+      <p class="section-header__subtitle">{{ home.how_it_works.subtitle }}</p>
+    </div>
+
+    <div class="steps">
+      {% for step in home.how_it_works.steps %}
+      <div class="step">
+        <span class="step__number">{{ step.number }}</span>
+        <h3 class="step__title">{{ step.title }}</h3>
+        <p class="step__text">{{ step.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ home.testimonials.title }}</h2>
+    </div>
+
+    <div class="grid grid--3">
+      {% for testimonial in home.testimonials.items %}
+      <div class="testimonial">
+        <p class="testimonial__quote">"{{ testimonial.quote }}"</p>
+        <p class="testimonial__author">{{ testimonial.author }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section section--white" id="contact">
+  <div class="container">
+    <div class="contact-section">
+      <div class="contact-section__info">
+        <h2>{{ home.contact_section.title }}</h2>
+        <p class="text-elegant mb-4">{{ home.contact_section.intro }}</p>
+
+        <div class="contact-details">
+          <p><strong>Email:</strong> <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+1{{ site.contact.phone | replace('-', '') }}">{{ site.contact.phone }}</a></p>
+          <p><strong>Service Area:</strong> {{ site.contact.service_area }}</p>
+        </div>
+
+        <p class="text-muted mt-4">{{ home.contact_section.note }}</p>
+      </div>
+
+      <div class="contact-section__form">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+          <input type="hidden" name="form-name" value="contact">
+
+          <!-- Honeypot field for spam prevention -->
+          <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
+
+          <div class="form-group">
+            <label for="name" class="form-label">Name *</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email *</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" id="phone" name="phone" class="form-input">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="event-date" class="form-label">Event Date</label>
+              <input type="date" id="event-date" name="event-date" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="guest-count" class="form-label">Guest Count</label>
+              <input type="number" id="guest-count" name="guest-count" class="form-input" min="1" placeholder="Approx.">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="event-type" class="form-label">Event Type</label>
+            <select id="event-type" name="event-type" class="form-select">
+              <option value="">Select an option</option>
+              <option value="retreat">Retreat Catering</option>
+              <option value="corporate">Corporate Catering</option>
+              <option value="private">Private Event</option>
+              <option value="dropoff">Drop-Off Catering</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Tell Us About Your Event *</label>
+            <textarea id="message" name="message" class="form-textarea" rows="4" required placeholder="Location, dietary needs, vision for your gathering..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--filled">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-header__title">{{ home.gallery.title }}</h2>
+    </div>
+
+    <div class="gallery">
+      {% for image in home.gallery.images %}
+      <div class="gallery__item">
+        <img src="{{ image.url }}" alt="{{ image.alt }}" class="gallery__image" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
