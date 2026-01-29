@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+  // Add year shortcode for copyright
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
   // Pass through static files (from root)
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("script.js");
