@@ -1,4 +1,9 @@
+const yaml = require("js-yaml");
+
 module.exports = function(eleventyConfig) {
+  // Support YAML data files
+  eleventyConfig.addDataExtension("yml,yaml", (contents) => yaml.load(contents));
+
   // Add year shortcode for copyright
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
