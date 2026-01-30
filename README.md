@@ -2,8 +2,8 @@
 
 Catering website for Harvest & Spice, built with Eleventy and editable through a browser-based CMS.
 
-**Live site:** https://harvestandspice.com
-**CMS admin:** https://harvestandspice.com/admin/
+**Live site:** https://www.harvestandspice.com
+**CMS admin:** https://www.harvestandspice.com/admin/
 
 ## How It Works
 
@@ -85,6 +85,17 @@ Output goes to `_site/`.
 Each page template (e.g. `src/index.njk`) pulls content from its corresponding data file (e.g. `src/_data/home.yml`) using Nunjucks syntax like `{{ home.hero.title }}`. Global data like the business name comes from `site.yml` and is accessed as `{{ site.name }}`.
 
 The CMS field definitions in `admin/config.yml` mirror the structure of these YAML files. When you add a field to the CMS, you also need to add the matching template code to render it.
+
+## Domain & DNS
+
+The domain `harvestandspice.com` is registered at **Namecheap**. DNS is configured at Namecheap to point to Netlify:
+
+- **CNAME record** -- `www` points to the Netlify site (e.g. `your-site.netlify.app`). This is what serves the site through Netlify's CDN.
+- **A record** -- `@` (the apex/root domain) points to Netlify's load balancer. This handles redirecting `harvestandspice.com` to `www.harvestandspice.com`.
+
+**`www.harvestandspice.com` is the primary domain.** This is intentional. When using external DNS (not Netlify DNS), the `www` subdomain must be primary to get full CDN benefits. Here's why: a CNAME record can point to a hostname that Netlify resolves to the nearest CDN edge server. An A record (required for the bare domain) can only point to a single IP address, which bypasses geographic CDN routing. So `www` gets the CDN, and the bare domain just redirects to it.
+
+To manage DNS records: log into Namecheap > Domain List > harvestandspice.com > Advanced DNS.
 
 ## Deployment
 

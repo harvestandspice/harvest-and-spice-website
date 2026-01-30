@@ -4,12 +4,9 @@
   command = "npm install && npm run build"
   publish = "_site"
 
-# Redirect www to non-www
-[[redirects]]
-  from = "https://www.harvestandspice.com/*"
-  to = "https://harvestandspice.com/:splat"
-  status = 301
-  force = true
+# Primary domain is www.harvestandspice.com (for CDN benefits).
+# Netlify handles the apex-to-www redirect automatically at the edge
+# when www is set as the primary domain in Netlify site settings.
 
 # Headers for security and caching
 [[headers]]
