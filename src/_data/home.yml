@@ -1,7 +1,7 @@
 hero:
   title: Plant-Powered Catering
   subtitle: Seasonal Mediterranean meals for retreats and gatherings
-  image: https://images.unsplash.com/photo-1547592180-85f173990554?w=1600&q=80
+  image: src/images/r6m21267.jpg
   cta_text: Request a Quote
   cta_link: "#contact"
 features:
