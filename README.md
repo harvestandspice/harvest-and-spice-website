@@ -88,12 +88,15 @@ The CMS field definitions in `admin/config.yml` mirror the structure of these YA
 
 ## Domain & DNS
 
-The domain `harvestandspice.com` is registered at **Namecheap**. DNS is configured at Namecheap to point to Netlify:
+The domain `harvestandspice.com` is registered at **Namecheap**. DNS records are configured in Namecheap's Advanced DNS panel to point traffic to Netlify.
 
-- **CNAME record** -- `www` points to the Netlify site (e.g. `your-site.netlify.app`). This is what serves the site through Netlify's CDN.
-- **A record** -- `@` (the apex/root domain) points to Netlify's load balancer. This handles redirecting `harvestandspice.com` to `www.harvestandspice.com`.
+Two DNS records make this work:
 
-**`www.harvestandspice.com` is the primary domain.** This is intentional. When using external DNS (not Netlify DNS), the `www` subdomain must be primary to get full CDN benefits. Here's why: a CNAME record can point to a hostname that Netlify resolves to the nearest CDN edge server. An A record (required for the bare domain) can only point to a single IP address, which bypasses geographic CDN routing. So `www` gets the CDN, and the bare domain just redirects to it.
+- **ALIAS record** for `@` (the bare domain, `harvestandspice.com`) -- Points to the Netlify site hostname. An ALIAS record is like a CNAME that works on the root domain. Normal CNAME records aren't allowed on root domains (a DNS rule), so ALIAS is the workaround. It resolves the Netlify hostname to an IP at the DNS level, so browsers can reach `harvestandspice.com` and get redirected to `www`.
+
+- **CNAME record** for `www` -- Points to the Netlify site hostname (e.g. `your-site.netlify.app`). A CNAME says "this subdomain is really just another name for that hostname." When someone visits `www.harvestandspice.com`, their browser follows the CNAME to Netlify, which routes them to the nearest CDN edge server.
+
+**`www.harvestandspice.com` is the primary domain.** This is intentional. When using external DNS (not Netlify DNS), the `www` subdomain must be primary to get full CDN benefits. A CNAME lets Netlify resolve to the nearest CDN edge server based on the visitor's location. The bare domain can't do this -- it resolves to a fixed IP, bypassing geographic routing. So `www` gets the CDN, and the bare domain just redirects to it. Netlify handles this redirect automatically when `www` is set as primary in site settings.
 
 To manage DNS records: log into Namecheap > Domain List > harvestandspice.com > Advanced DNS.
 
