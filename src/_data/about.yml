@@ -2,45 +2,53 @@ hero:
   title: Nourishment by Nature
   subtitle: How a kitchen garden became a calling
   image: https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1600&q=80
-
 story:
   title: The Beginning
-  intro: Harvest & Spice began as a home-kitchen dream and grew into a Bay Area catering company built on nourishment, culture, and bold flavor.
-  text: I started the business in 2023 without formal culinary training, learning by doing—cooking for community, refining recipes, and building a menu style that feels both vibrant and grounded.
-  image: https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80
+  intro: Harvest & Spice began as a home-kitchen dream and grew into a Bay Area
+    catering company built on nourishment, culture, and bold flavor.
+  text: I started the business in 2023 without formal culinary training, learning
+    by doing—cooking for community, refining recipes, and building a menu style
+    that feels both vibrant and grounded.
+  image: /images/sanaa.jpg
   image_alt: Fresh ingredients being prepared
-
 food:
   title: The Food
-  intro: "Moroccan-inspired and California-fresh: seasonal vegetables, bright herbs, warming spices, and colorful spreads designed to feel abundant."
-  text: I'm known for bold salads, mezze-style sides, and satisfying plant-forward mains that keep groups energized and happy. Every dish celebrates the connection between food, land, and the people we feed.
-  image: https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&q=80
+  intro: "Moroccan-inspired and California-fresh: seasonal vegetables, bright
+    herbs, warming spices, and colorful spreads designed to feel abundant."
+  text: I'm known for bold salads, mezze-style sides, and satisfying plant-forward
+    mains that keep groups energized and happy. Every dish celebrates the
+    connection between food, land, and the people we feed.
+  image: /images/hamsa_bowl.jpg
   image_alt: Colorful Mediterranean ingredients
-
 why_retreats:
   title: Why Retreats
-  intro: I love feeding groups—especially retreats—because food becomes part of the experience. It supports presence, connection, and care.
-  text: Whether it's a weekend retreat or a team offsite lunch, my goal is always the same - food that tastes incredible and leaves people feeling well.
+  intro: I love feeding groups—especially retreats—because food becomes part of
+    the experience. It supports presence, connection, and care.
+  text: Whether it's a weekend retreat or a team offsite lunch, my goal is always
+    the same - food that tastes incredible and leaves people feeling well.
   image: https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80
   image_alt: Beautifully plated dish
-
 values:
   title: Our Values
   subtitle: The principles that guide every meal we create
   items:
     - title: Seasonal & Local
-      text: We source from California farms whenever possible, letting the seasons guide our menus and celebrating the bounty of our region.
+      text: We source from California farms whenever possible, letting the seasons
+        guide our menus and celebrating the bounty of our region.
     - title: Inclusive by Design
-      text: Dietary accommodations aren't an afterthought. Vegan, gluten-free, and allergy-conscious options are built into every menu.
+      text: Dietary accommodations aren't an afterthought. Vegan, gluten-free, and
+        allergy-conscious options are built into every menu.
     - title: Nourishment First
-      text: We believe food should leave you feeling energized and satisfied, not sluggish. Every dish is crafted with wellbeing in mind.
-
+      text: We believe food should leave you feeling energized and satisfied, not
+        sluggish. Every dish is crafted with wellbeing in mind.
 testimonial:
-  quote: The attention to detail, the beautiful presentation, and most importantly, the incredible flavors—working with Harvest & Spice transformed our retreat experience.
+  quote: The attention to detail, the beautiful presentation, and most
+    importantly, the incredible flavors—working with Harvest & Spice transformed
+    our retreat experience.
   author: Retreat Coordinator, Quaker Center
-
 cta:
   title: Let's Build Your Menu
-  text: Harvest & Spice is Oakland-based and available for retreats, corporate catering, and private events across the Bay Area
+  text: Harvest & Spice is Oakland-based and available for retreats, corporate
+    catering, and private events across the Bay Area
   button_text: Start a Conversation
   button_link: /#contact
