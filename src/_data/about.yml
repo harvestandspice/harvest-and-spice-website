@@ -1,6 +1,6 @@
 hero:
   title: Nourishment by Nature
-  subtitle: How a kitchen garden became a calling
+  subtitle: How a passion became a calling
   image: https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1600&q=80
 story:
   title: The Beginning
@@ -26,7 +26,7 @@ why_retreats:
     the experience. It supports presence, connection, and care.
   text: Whether it's a weekend retreat or a team offsite lunch, my goal is always
     the same - food that tastes incredible and leaves people feeling well.
-  image: https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80
+  image: /images/squash.jpg
   image_alt: Beautifully plated dish
 values:
   title: Our Values
