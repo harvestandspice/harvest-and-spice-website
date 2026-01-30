@@ -4,9 +4,9 @@
   command = "npm install && npm run build"
   publish = "_site"
 
-# Primary domain is www.harvestandspice.com (for CDN benefits).
-# Netlify handles the apex-to-www redirect automatically at the edge
-# when www is set as the primary domain in Netlify site settings.
+# Primary domain is harvestandspice.com (bare domain).
+# Netlify handles the www-to-bare redirect automatically at the edge
+# when the bare domain is set as primary in Netlify site settings.
 
 # Headers for security and caching
 [[headers]]

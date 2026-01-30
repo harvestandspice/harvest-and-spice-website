@@ -2,8 +2,8 @@
 
 Catering website for Harvest & Spice, built with Eleventy and editable through a browser-based CMS.
 
-**Live site:** https://www.harvestandspice.com
-**CMS admin:** https://www.harvestandspice.com/admin/
+**Live site:** https://harvestandspice.com
+**CMS admin:** https://harvestandspice.com/admin/
 
 ## How It Works
 
@@ -88,17 +88,25 @@ The CMS field definitions in `admin/config.yml` mirror the structure of these YA
 
 ## Domain & DNS
 
-The domain `harvestandspice.com` is registered at **Namecheap**. DNS records are configured in Namecheap's Advanced DNS panel to point traffic to Netlify.
+The domain `harvestandspice.com` is registered at **Namecheap**. DNS is configured in Namecheap's Advanced DNS panel to point traffic to Netlify.
 
-Two DNS records make this work:
+**`harvestandspice.com` (the bare domain) is the primary domain** in Netlify. Visitors to `www.harvestandspice.com` are automatically redirected to `harvestandspice.com`.
 
-- **ALIAS record** for `@` (the bare domain, `harvestandspice.com`) -- Points to the Netlify site hostname. An ALIAS record is like a CNAME that works on the root domain. Normal CNAME records aren't allowed on root domains (a DNS rule), so ALIAS is the workaround. It resolves the Netlify hostname to an IP at the DNS level, so browsers can reach `harvestandspice.com` and get redirected to `www`.
+### DNS records (configured in Namecheap)
 
-- **CNAME record** for `www` -- Points to the Netlify site hostname (e.g. `your-site.netlify.app`). A CNAME says "this subdomain is really just another name for that hostname." When someone visits `www.harvestandspice.com`, their browser follows the CNAME to Netlify, which routes them to the nearest CDN edge server.
+- **ALIAS record** for `@` → `apex-loadbalancer.netlify.com.` -- This is the main record that makes the site work. An ALIAS record is like a CNAME but for the root domain (normal CNAMEs aren't allowed on root domains -- that's a DNS rule). It tells Namecheap to resolve `apex-loadbalancer.netlify.com` to an IP address and serve that IP when someone visits `harvestandspice.com`.
 
-**`www.harvestandspice.com` is the primary domain.** This is intentional. When using external DNS (not Netlify DNS), the `www` subdomain must be primary to get full CDN benefits. A CNAME lets Netlify resolve to the nearest CDN edge server based on the visitor's location. The bare domain can't do this -- it resolves to a fixed IP, bypassing geographic routing. So `www` gets the CDN, and the bare domain just redirects to it. Netlify handles this redirect automatically when `www` is set as primary in site settings.
+- **CNAME record** for `www` → `harvest-and-spice.netlify.app.` -- This makes `www.harvestandspice.com` work. A CNAME says "this subdomain is really another name for that hostname." Netlify then redirects www visitors to the primary bare domain. **This record needs to be added in Namecheap if not already present** (Netlify shows "Pending DNS verification" for www without it).
 
-To manage DNS records: log into Namecheap > Domain List > harvestandspice.com > Advanced DNS.
+- **TXT record** for `@` -- SPF record for email forwarding. Managed automatically by Namecheap.
+
+### Where to manage DNS
+
+Namecheap > Domain List > harvestandspice.com > Advanced DNS.
+
+### Note on CDN performance
+
+With external DNS (not Netlify DNS), the ALIAS record for the bare domain routes through Netlify's load balancer (`apex-loadbalancer.netlify.com`), which provides basic load balancing but not full geographic CDN edge routing. A CNAME (used by the www subdomain) does get full CDN routing. For a site of this scale, this makes no practical difference. If CDN edge performance ever matters, the options are switching the primary domain to www or migrating to Netlify DNS.
 
 ## Deployment
 
