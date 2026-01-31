@@ -96,7 +96,7 @@ The domain `harvestandspice.com` is registered at **Namecheap**. DNS is configur
 
 - **ALIAS record** for `@` → `apex-loadbalancer.netlify.com.` -- This is the main record that makes the site work. An ALIAS record is like a CNAME but for the root domain (normal CNAMEs aren't allowed on root domains -- that's a DNS rule). It tells Namecheap to resolve `apex-loadbalancer.netlify.com` to an IP address and serve that IP when someone visits `harvestandspice.com`.
 
-- **CNAME record** for `www` → `harvest-and-spice.netlify.app.` -- This makes `www.harvestandspice.com` work. A CNAME says "this subdomain is really another name for that hostname." Netlify then redirects www visitors to the primary bare domain. **This record needs to be added in Namecheap if not already present** (Netlify shows "Pending DNS verification" for www without it).
+- **CNAME record** for `www` → `harvest-and-spice.netlify.app.` -- This makes `www.harvestandspice.com` work. A CNAME says "this subdomain is really another name for that hostname." Netlify then redirects www visitors to the primary bare domain.
 
 - **TXT record** for `@` -- SPF record for email forwarding. Managed automatically by Namecheap.
 
