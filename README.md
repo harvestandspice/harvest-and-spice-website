@@ -60,6 +60,7 @@ src/
   about.njk           # About page template
   services.njk        # Services page template
   menus.njk           # Menus page template
+  success.njk         # Form submission thank you page
   images/             # Uploaded images
 ```
 
@@ -108,8 +109,37 @@ Namecheap > Domain List > harvestandspice.com > Advanced DNS.
 
 With external DNS (not Netlify DNS), the ALIAS record for the bare domain routes through Netlify's load balancer (`apex-loadbalancer.netlify.com`), which provides basic load balancing but not full geographic CDN edge routing. A CNAME (used by the www subdomain) does get full CDN routing. For a site of this scale, this makes no practical difference. If CDN edge performance ever matters, the options are switching the primary domain to www or migrating to Netlify DNS.
 
+## Contact Form
+
+The contact form on the homepage is handled by **Netlify Forms** -- no backend code or server needed. Netlify detects the form during the build (via the `data-netlify="true"` attribute) and captures submissions automatically.
+
+### How it works
+
+1. A visitor fills out the form and submits it
+2. Netlify intercepts the POST, stores the submission, and redirects to `/success/` (a simple thank you page)
+3. The submission appears in the Netlify dashboard under **Forms → contact**
+4. An email notification is sent to the configured address
+
+### Where submissions live
+
+Netlify dashboard → **Forms** → **contact**. All submissions are stored there with the full form data.
+
+### Email notifications
+
+Email notifications are configured in the Netlify dashboard at **Project configuration → Notifications → Emails and webhooks → Form submission notifications**. Notification emails come from `formresponses@netlify.com` -- check spam if they don't appear.
+
+### Setup requirement
+
+**Form detection must be enabled** in the Netlify dashboard under Forms. This is a one-time toggle. After enabling it, a deploy is needed so Netlify can scan the HTML and register the form. Without this, form submissions will 404.
+
+### Spam filtering
+
+The form uses a honeypot field (`netlify-honeypot="bot-field"`) to filter out bots. This is a hidden field that real users never see -- bots that fill it out are silently rejected.
+
+### Free tier
+
+Netlify's free plan includes 100 form submissions per month.
+
 ## Deployment
 
 Netlify automatically builds and deploys on every push to `main`. The build command and publish directory are configured in `netlify.toml`.
-
-Contact form submissions are handled by Netlify Forms (the `data-netlify="true"` attribute on the form). Submissions appear in the Netlify dashboard under Forms.
