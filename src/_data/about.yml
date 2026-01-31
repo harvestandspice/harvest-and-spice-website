@@ -9,7 +9,7 @@ story:
   text: I started the business in 2023 without formal culinary training, learning
     by doing—cooking for community, refining recipes, and building a menu style
     that feels both vibrant and grounded.
-  image: /images/sanaa.jpg
+  image: https://harvestandspice.com/images/sanaa.jpg
   image_alt: Fresh ingredients being prepared
 food:
   title: The Food
@@ -18,7 +18,7 @@ food:
   text: I'm known for bold salads, mezze-style sides, and satisfying plant-forward
     mains that keep groups energized and happy. Every dish celebrates the
     connection between food, land, and the people we feed.
-  image: /images/hamsa_bowl.jpg
+  image: https://harvestandspice.com/images/hamsa_bowl.jpg
   image_alt: Colorful Mediterranean ingredients
 why_retreats:
   title: Why Retreats
@@ -26,7 +26,7 @@ why_retreats:
     the experience. It supports presence, connection, and care.
   text: Whether it's a weekend retreat or a team offsite lunch, my goal is always
     the same - food that tastes incredible and leaves people feeling well.
-  image: /images/squash.jpg
+  image: https://harvestandspice.com/images/squash.jpg
   image_alt: Beautifully plated dish
 values:
   title: Our Values
