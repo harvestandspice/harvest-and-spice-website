@@ -5,6 +5,10 @@ Catering website for Harvest & Spice, built with Eleventy and editable through a
 **Live site:** https://harvestandspice.com
 **CMS admin:** https://harvestandspice.com/admin/
 
+## Content Guide for Site Owners
+
+See **[CONTENT-GUIDE.md](CONTENT-GUIDE.md)** — a non-technical guide for editing content, checking form submissions, and managing the site through the CMS. Written for the site owner, not developers.
+
 ## How It Works
 
 The site is a static site generator ([Eleventy](https://www.11ty.dev/)) with a headless CMS ([Decap CMS](https://decapcms.org/), formerly Netlify CMS). Content lives in YAML data files. When someone edits content through the CMS, it commits the changes to GitHub, which triggers Netlify to rebuild and deploy the site.
